@@ -1,0 +1,6 @@
+EW Remote Registry Editor 1.0
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\EditActivation]
+
+"EnableEditActivation"=dword:00000000
+

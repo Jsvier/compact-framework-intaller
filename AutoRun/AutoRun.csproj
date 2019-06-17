@@ -1,0 +1,207 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB964F87-19EB-4613-8E5C-DB63DA02B875}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoRun</RootNamespace>
+    <AssemblyName>AutoRun</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.1</OSVersion>
+    <DeployDirSuffix>HHT_Base</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 5.0 Pocket PC SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>installation.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandLineArgs.cs" />
+    <Compile Include="CustomCABInstaller.cs" />
+    <Compile Include="HHT_BASE.cs" />
+    <Compile Include="HHT_Helper.cs" />
+    <Compile Include="HHT_Directory.cs" />
+    <Compile Include="FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBase.Designer.cs">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HHT_Registry.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBase.resx">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RDT\Generic.cs" />
+    <Compile Include="RDT\IRTD.cs" />
+    <Compile Include="Service\ServiceProxy.cs" />
+    <Compile Include="Service\WebRequestCompact.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Setting\NETCFv35.Messages.EN.cab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\Samples.C\About.exe" />
+    <Content Include="Setting\Samples.C\AudioExSamp.exe" />
+    <Content Include="Setting\Samples.C\AudioSamp.exe" />
+    <Content Include="Setting\Samples.C\BasicBeeper.exe" />
+    <Content Include="Setting\Samples.C\BasicDisplay.exe" />
+    <Content Include="Setting\Samples.C\BasicPersist.exe" />
+    <Content Include="Setting\Samples.C\BasicPower.exe" />
+    <Content Include="Setting\Samples.C\BasicPrint.exe" />
+    <Content Include="Setting\Samples.C\BasicResCoord.exe" />
+    <Content Include="Setting\Samples.C\BasicS24.exe" />
+    <Content Include="Setting\Samples.C\BasicScan.exe" />
+    <Content Include="Setting\Samples.C\Blt.exe" />
+    <Content Include="Setting\Samples.C\coffee.bmp" />
+    <Content Include="Setting\Samples.C\FusionSample.exe" />
+    <Content Include="Setting\Samples.C\ImagerSample.exe" />
+    <Content Include="Setting\Samples.C\Images\EIRE342.jpg" />
+    <Content Include="Setting\Samples.C\ImageViewer.exe" />
+    <Content Include="Setting\Samples.C\InkWiz.exe" />
+    <Content Include="Setting\Samples.C\KeyCheck.exe" />
+    <Content Include="Setting\Samples.C\LowBattWarning.exe" />
+    <Content Include="Setting\Samples.C\MemTest.exe" />
+    <Content Include="Setting\Samples.C\Msg.exe" />
+    <Content Include="Setting\Samples.C\msrsamp2.exe" />
+    <Content Include="Setting\Samples.C\Notify.exe" />
+    <Content Include="Setting\Samples.C\Otl.exe" />
+    <Content Include="Setting\Samples.C\PsSample.exe" />
+    <Content Include="Setting\Samples.C\Samples_Setup.dll" />
+    <Content Include="Setting\Samples.C\ScanParams.exe" />
+    <Content Include="Setting\Samples.C\ScanRSM.exe" />
+    <Content Include="Setting\Samples.C\ScanSamp1.exe" />
+    <Content Include="Setting\Samples.C\ScanSamp2.exe" />
+    <Content Include="Setting\Samples.C\ScanWedge.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\Samples.C\Select.exe" />
+    <Content Include="Setting\Samples.C\Symdjpeg.dll" />
+    <Content Include="Setting\Samples.C\SysInfoSample.exe" />
+    <Content Include="Setting\Samples.C\Wav\LASER.WAV" />
+    <Content Include="Setting\Samples.C\Win32PrintSamp.exe" />
+    <Content Include="Setting\sqlce.wce5.armv4i.CAB">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\symbol.cab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\VNC\vncconfig.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\VNC\winvnc.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="installation.ico" />
+    <Content Include="README.txt" />
+    <Content Include="Setting\clean.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\makro-st.reg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Setting\Samples.C\Samples.C.lnk" />
+    <Content Include="Setting\installation.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\Inventario.CAB">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\MBSce.CAB">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\mbsfasttrack.CAB">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\StartUp\ScanWedge.lnk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\StartUp\winvnc.lnk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setting\Warm Reset.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\jsoncf-master\Src\Newtonsoft.Json\Newtonsoft.Json.Compact.csproj">
+      <Project>{256AA604-F61B-4B6D-8D51-C8E6AB11E435}</Project>
+      <Name>Newtonsoft.Json.Compact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenNETCF.Compression.CAB\OpenNETCF.Compression.CAB\OpenNETCF.Compression.CAB.Device.csproj">
+      <Project>{84D8F7A2-04F2-480F-873C-9E8BD0C1F36C}</Project>
+      <Name>OpenNETCF.Compression.CAB.Device</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

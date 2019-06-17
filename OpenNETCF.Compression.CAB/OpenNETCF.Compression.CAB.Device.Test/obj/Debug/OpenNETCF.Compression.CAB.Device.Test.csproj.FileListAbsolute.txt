@@ -1,0 +1,7 @@
+C:\Users\jetchepare\Desktop\cab\sourceCode\sourceCode\OpenNETCF.Compression.CAB\OpenNETCF.Compression.CAB.Device.Test\bin\Debug\OpenNETCF.Compression.CAB.Device.Test.dll
+C:\Users\jetchepare\Desktop\cab\sourceCode\sourceCode\OpenNETCF.Compression.CAB\OpenNETCF.Compression.CAB.Device.Test\bin\Debug\OpenNETCF.Compression.CAB.Device.Test.pdb
+C:\Users\jetchepare\Desktop\cab\sourceCode\sourceCode\OpenNETCF.Compression.CAB\OpenNETCF.Compression.CAB.Device.Test\bin\Debug\OpenNETCF.Compression.CAB.dll
+C:\Users\jetchepare\Desktop\cab\sourceCode\sourceCode\OpenNETCF.Compression.CAB\OpenNETCF.Compression.CAB.Device.Test\bin\Debug\OpenNETCF.Compression.CAB.pdb
+C:\Users\jetchepare\Desktop\cab\sourceCode\sourceCode\OpenNETCF.Compression.CAB\OpenNETCF.Compression.CAB.Device.Test\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jetchepare\Desktop\cab\sourceCode\sourceCode\OpenNETCF.Compression.CAB\OpenNETCF.Compression.CAB.Device.Test\obj\Debug\OpenNETCF.Compression.CAB.Device.Test.dll
+C:\Users\jetchepare\Desktop\cab\sourceCode\sourceCode\OpenNETCF.Compression.CAB\OpenNETCF.Compression.CAB.Device.Test\obj\Debug\OpenNETCF.Compression.CAB.Device.Test.pdb

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OpenNETCF.Compression.CAB.WinCEInstallerFile">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <Members>
+      <Method Name="~WinCEInstallerFile" Hidden="true" />
+      <Method Name="GetFileByExtensionIndex" Hidden="true" />
+      <Field Name="m_appNameOverride" Hidden="true" />
+      <Field Name="m_cab" Hidden="true" />
+      <Field Name="m_descriptor" Hidden="true" />
+      <Field Name="m_failedFiles" Hidden="true" />
+      <Field Name="m_failedRegVals" Hidden="true" />
+      <Field Name="m_failedShortcuts" Hidden="true" />
+      <Field Name="m_fileSyncRoot" Hidden="true" />
+      <Field Name="m_installDirOverride" Hidden="true" />
+      <Field Name="m_installInfo" Hidden="true" />
+      <Field Name="m_tempFolder" Hidden="true" />
+      <Method Name="ReplaceSpecialFolderStrings" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEgIGQEAUKgEAgA0ChEIQQQBBAEAIACBAAIIBQUAACg=</HashCode>
+      <FileName>WinCEInstallerFile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
