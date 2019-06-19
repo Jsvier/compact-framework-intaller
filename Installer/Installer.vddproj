@@ -12,12 +12,6 @@
 "SccProvider" = "8:"
     "Hierarchy"
     {
-        "Entry"
-        {
-        "MsmKey" = "8:_2DE1A4285BED455B9EB9E73BE1C5C05F"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
     }
     "Configurations"
     {
@@ -50,24 +44,6 @@
     {
         "File"
         {
-            "{BA458234-9B71-4F46-8107-E91156377184}:_2DE1A4285BED455B9EB9E73BE1C5C05F"
-            {
-            "SourcePath" = "8:..\\HHT-Base\\Setting\\makro-st.reg"
-            "TargetName" = "8:makro-st.reg"
-            "Tag" = "8:"
-            "Folder" = "8:_D61E2F37CCC24DFA96DCD825ECB418AB"
-            "Condition" = "8:"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
         }
         "Folder"
         {

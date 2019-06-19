@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandLineArgs.cs" />
+    <Compile Include="Configuration\AutorunEnum.cs" />
+    <Compile Include="Configuration\AutorunException.cs" />
     <Compile Include="CustomCABInstaller.cs" />
     <Compile Include="HHT_BASE.cs" />
     <Compile Include="HHT_Helper.cs" />
@@ -85,10 +87,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="RDT\CAB.cs" />
     <Compile Include="RDT\Generic.cs" />
     <Compile Include="RDT\IRTD.cs" />
+    <Compile Include="RDT\RTD_CABs.cs" />
+    <Compile Include="RDT\RTD_Error.cs" />
     <Compile Include="Service\ServiceProxy.cs" />
     <Compile Include="Service\WebRequestCompact.cs" />
+    <Compile Include="UserSession.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +154,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="config.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="installation.ico" />
     <Content Include="README.txt" />
     <Content Include="Setting\clean.bat">

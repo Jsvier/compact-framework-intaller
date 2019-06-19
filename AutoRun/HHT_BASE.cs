@@ -9,7 +9,6 @@ namespace HHT_Base
     public class HHT_BASE
     {
         public delegate void EventHandler(String s);
-        private string _ParameterWceload;
         public event EventHandler Message;
         public const int MAX_ARGS_SUPPORTED = 4;
 
@@ -23,22 +22,5 @@ namespace HHT_Base
                 Message(message);
         }
 
-        public string ParameterWceload
-        {
-             get
-             {
-                 if (_ParameterWceload == null)
-                 {
-
-                     if (System.Environment.OSVersion.Version.Major < 7)
-                        _ParameterWceload = "/noaskdest /noui \"";
-                     else
-                         _ParameterWceload = " /noaskdest /noui \"";
-                        //_ParameterWceload = "/nodelete /silent \"";
-                 }
-
-                 return _ParameterWceload;
-             }
-        } 
     }
 }

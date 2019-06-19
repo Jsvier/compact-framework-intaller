@@ -7,6 +7,8 @@ using System.IO;
 using System.Diagnostics;
 using System.Windows.Forms;
 using ONCFInstall;
+using prototype.request;
+using Newtonsoft.Json;
 
 namespace HHT_Base
 {
@@ -84,6 +86,13 @@ namespace HHT_Base
         /// </summary>
         public void RunCAB()
         {
+            //List<CAB> list = new List<CAB>();
+            //list.Add( new CAB{ CAB_LINK ="fastrack",CAB_NAME ="Fasttrack", CAB_URL =" localhost:9999/data.php"});
+            //list.Add( new CAB{ CAB_LINK ="inventario",CAB_NAME ="inventario", CAB_URL =" localhost:9999/data.php"});
+            //list.Add(new CAB { CAB_LINK = "MBS", CAB_NAME = "MBS", CAB_URL = " localhost:9999/data.php" });
+
+            //var json =JsonConvert.SerializeObject(list);
+
             OnMessage("Comienza la Instalacion de CAB de Mensajeria .. ");
 
             if (!HHT_Helper.ListProgams.Contains("Microsoft .NET CF 3.5 EN-String Resource"))
@@ -99,16 +108,27 @@ namespace HHT_Base
             if (!HHT_Helper.ListProgams.Contains("Symbol Managed Class Libraries"))
                 Install_CAB_ZIP(HHT_Helper.HHT_PATH + "\\Setting\\symbol.cab", false);
 
+            //OnMessage("Comienza la Instalacion de CAB de MBS .. ");
+            //Install_CAB_ZIP(HHT_Helper.HHT_PATH + "\\Setting\\MBSce.CAB", true);
 
-            //TODO:DESCARGAR DE URL
-            OnMessage("Comienza la Instalacion de CAB de MBS .. ");
-            Install_CAB_ZIP(HHT_Helper.HHT_PATH + "\\Setting\\MBSce.CAB", true);
+            //OnMessage("Comienza la Instalacion de CAB de Fast-track .. ");
+            //Install_CAB_ZIP(HHT_Helper.HHT_PATH + "\\Setting\\mbsfasttrack.CAB", true);
 
-            OnMessage("Comienza la Instalacion de CAB de Fast-track .. ");
-            Install_CAB_ZIP(HHT_Helper.HHT_PATH + "\\Setting\\mbsfasttrack.CAB", true);
+            //OnMessage("Comienza la Instalacion de CAB de Inventario .. ");
+            //Install_CAB_ZIP(HHT_Helper.HHT_PATH + "\\Setting\\Inventario.CAB", true);
 
-            OnMessage("Comienza la Instalacion de CAB de Inventario .. ");
-            Install_CAB_ZIP(HHT_Helper.HHT_PATH + "\\Setting\\Inventario.CAB", true);
+            IRTD parameters = UserSession.ServiceProxy.Get_CABs();
+            
+            if (parameters is RTD_Error)
+                throw new AutorunException(((RTD_Error)parameters).d);
+
+            foreach (var cab in ((RTD_CABs)parameters).d)
+            {
+                OnMessage( string.Format("Comienza la Instalacion de CAB de {0} .. ",cab.CAB_NAME ));
+
+                Utility.DownloadFile(cab.CAB_URL, string.Concat(@"/Tmp/", cab.CAB_NAME));
+                Install_CAB_ZIP(string.Concat(@"/tmp/", cab.CAB_NAME), true);
+            }
 
             OnMessage("Fin la Instalacion de CAB .. ");  
         }

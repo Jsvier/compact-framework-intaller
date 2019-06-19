@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Text;
 using OpenNETCF.Compression.CAB;
+using HHT_Base;
 
 namespace System.Runtime.CompilerServices
 {
